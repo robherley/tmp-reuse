@@ -1,0 +1,15 @@
+name: reuse
+on:
+  workflow_call:
+    inputs:
+      runs-on:
+        description: The label of the action runner this job will run on
+        type: string
+        default: rob-runner
+jobs:
+  build:
+    runs-on: ${{ inputs.runs-on }}
+    timeout-minutes: 720
+    steps:
+      - name: "🤠"
+        run: echo "howdy"
