@@ -1,0 +1,7 @@
+name: build
+on:
+  workflow_dispatch:
+jobs:
+  build-image:
+    name: useit
+    uses: ./.github/workflows/reuse.yml
